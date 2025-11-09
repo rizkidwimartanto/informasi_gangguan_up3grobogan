@@ -21,5 +21,6 @@ Route::controller(DataGangguanController::class)->group(function () {
     Route::get('/{id}', 'show')->name('data-gangguan.show');
     Route::get('/{id}/edit', 'edit')->name('data-gangguan.edit');
     Route::put('/{id}', 'update')->name('data-gangguan.update');
+    Route::post('/importExcel', 'importExcel')->name('data-gangguan.importExcel');
     Route::delete('/data-gangguan/{id}', 'destroy')->name('data-gangguan.destroy');
 });

@@ -11,7 +11,9 @@ class DataGangguan extends Model
     protected $table = 'data_gangguan';
     protected $primaryKey = 'id';
     protected $fillable = [
+        'nihil',
         'penyulang',
-        'keypoint'
+        'keypoint',
+        'jumlah_trafo'
     ];
 }
