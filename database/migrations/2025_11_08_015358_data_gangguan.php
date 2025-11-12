@@ -14,8 +14,14 @@ return new class extends Migration
         Schema::create('data_gangguan', function (Blueprint $table) {
             $table->id();
             $table->string('nihil')->nullable();
+            $table->string('ulp')->nullable();
             $table->string('penyulang')->nullable();
             $table->string('keypoint')->nullable();
+            $table->string('gardu_padam')->nullable();
+            $table->string('progress_nyala')->nullable();
+            $table->string('jam_padam')->nullable();
+            $table->string('durasi_padam')->nullable();
+            $table->string('progress')->nullable();
             $table->string('jumlah_trafo')->nullable();
             $table->timestamps();
         });

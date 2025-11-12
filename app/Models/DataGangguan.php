@@ -12,8 +12,14 @@ class DataGangguan extends Model
     protected $primaryKey = 'id';
     protected $fillable = [
         'nihil',
+        'ulp',
         'penyulang',
         'keypoint',
+        'gardu_padam',
+        'progress_nyala',
+        'jam_padam',
+        'durasi_padam',
+        'progress',
         'jumlah_trafo'
     ];
 }

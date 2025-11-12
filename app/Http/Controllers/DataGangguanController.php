@@ -11,8 +11,13 @@ class DataGangguanController extends Controller
 {
     public function index()
     {
-        $data_gangguan = DataGangguan::all();
-        return view('index', compact('data_gangguan'));
+        $data = [
+            $data_gangguan = DataGangguan::all(),
+            $penyulang = DataGangguan::select('penyulang')->distinct()->get(),
+            $keypoint = DataGangguan::select('keypoint')->distinct()->get(),
+            $jumlahTrafo = DataGangguan::select('jumlah_trafo')->distinct()->get(),
+        ];
+        return view('index', compact('data_gangguan', 'penyulang', 'keypoint', 'jumlahTrafo'));
     }
     public function importExcel(Request $request)
     {
